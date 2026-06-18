@@ -26,6 +26,27 @@ public class dzshka {
 
     }
     public static void section3(){
+        int M = 67760;
+        int D = 83690;
+        int K = 76230;
+        int[] spisok={M,D,K};
+        for (int i=0;i<spisok.length;i++){
+            spisok[i] = (int) (spisok[i] + 0.1 * spisok[i]);
+            if (i==0){
+                System.out.println("Маша теперь получает " +  spisok[i] + " рублей. Годовой доход вырос на " + (spisok[i]*12-M*12) + " рублей");
+            }
+            else if (i==1){
+                System.out.println("Денис теперь получает " +  spisok[i] + " рублей. Годовой доход вырос на " + (spisok[i]*12-D*12)  + " рублей");
+            }
+            else if (i==2){
+                System.out.println("Кристина теперь получает " +  spisok[i] + " рублей. Годовой доход вырос на " + (spisok[i]*12-K*12) + " рублей");
+
+            }
+        }
+
+
+
+
 
     }
 }
