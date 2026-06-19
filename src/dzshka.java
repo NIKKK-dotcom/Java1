@@ -49,5 +49,67 @@ public class dzshka {
 
 
     }
+    public static void section4(){
+         int x=2;
+         if (2<=x && x<=6){
+             System.out.println("Если возраст человека равен"+ x +", то ему нужно ходить в детсад");
+         }
+         else if (7<=x && x<=17){
+             System.out.println("Если возраст человека равен"+ x +", то ему нужно ходить в шк");
+         }
+         else if (18<=x && x<=24) {
+             System.out.println("Если возраст человека равен" + x + ", то ему нужно ходить в универ");
+         }
+         else if (x>24) {
+             System.out.println("Если возраст человека равен" + x + ", то ему нужно ходить на работу");
+         }
+    }
+    public static void section5(){
+        int x = 50;
+
+        if (x<=60){
+            System.out.println("Есть сидячие места: " + (60-x) + " Есть стоячие места: " + (102-60));
+        }
+        else if (x>60){
+            System.out.println("Нет сидячих мест. Есть стоячие места: " + (102-x));
+        }
+        else{
+            System.out.println("Нет мест.");
+        }
+        }
+    public static void section6(){
+        int year = 2021;
+        if (year > 1584 && year%4==0 && year%100!=0 && year%400==0){
+            System.out.println(year +  " год является високосным");
+        }
+        else{
+            System.out.println(year + " год не является високосным");
+        }
+    }
+    public static void section7(){
+        int monthNum = 12;
+        if (monthNum<0 || monthNum>12){
+            System.out.println("Ошибка!");
+        }
+        else{
+            switch (monthNum){
+                case 12: case 1: case 2:
+                    System.out.println("зима");
+                    break;
+                case 3: case 4: case 5:
+                    System.out.println("весна");
+                    break;
+                case 6: case 7: case 8:
+                    System.out.println("лето");
+                    break;
+                case 9: case 10: case 11:
+                    System.out.println("осень");
+                    break;
+
+            }
+        }
+
+            }
+
 }
 
