@@ -110,6 +110,31 @@ public class dzshka {
         }
 
             }
+    public static void section8(){
+        for (int i=1; i<11; i++){
+            System.out.println(i);
+        }
+    }                 //НОВОЕ ДЗ
+    public static void section9(){
+        for (int i=0; i<22; i++){
+            if (i%2==0){
+                System.out.println(i);}
+        }
+    }
+    public static void section10(){
+        for (int i=7; i<99; i+=7){
+            System.out.println(i);
+        }
+    }
+    public static void section11(){
+        int a = 12000;
+        for (int i=1;i<13;i++){
+            System.out.println("Месяц "+ i+", сумма накоплений равна " + (a*i)+ " рублей.");
+        }
+
+
+    }
+
 
 }
 
