@@ -114,7 +114,7 @@ public class dzshka {
         for (int i=1; i<11; i++){
             System.out.println(i);
         }
-    }                 //НОВОЕ ДЗ
+    }
     public static void section9(){
         for (int i=0; i<22; i++){
             if (i%2==0){
@@ -134,7 +134,50 @@ public class dzshka {
 
 
     }
+    public static void section12(){                                // новое дзззз
+        int num = 1;
+        while (num<51){
+            if (num%2==0){
+                System.out.println(num);
+            }
+            num++;
+
+        }
+    } // ДЗЗЗЗЗЗЗЗЗЗЗЗ
+    public static void section13(){
+        int a = 1;
+        int c = 0;
+        do{
+            if (a%7==0){
+                c++;
+            }
+            a++;
+
+        }while (a<=100);
+        System.out.println("Количество чисел от 1 до 100, делящихся на 7: "+c);
+
+        }
+    public static void section14(){
+        int su = 0;
+        int st = 1;
+        while (st<101){
+            su+=st;
+            st++;
+            System.out.println(su);
+        }
+    }
+    public static void section15(){
+        int RandomNum;
+        int count = 0;
+        do {
+            RandomNum = (int) (Math.random() * 20) + 1;
+            count++;
+            System.out.println("Сгенерино число: " + RandomNum);
+        }    while (RandomNum!=15);
+        System.out.println("Кол-во сгенериных чисел до 15: " + count);
+    }
+    }
 
 
-}
+
 
