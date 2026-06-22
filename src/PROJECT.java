@@ -86,6 +86,73 @@ class BookEmployees{
             System.out.println(emp.toString());
         }
     }
+    public void CalculateSalary(){
+        double AllSalary = 0;
+        for (Employee emp: employees){
+            AllSalary+=emp.getSalary();
+
+        }
+        System.out.println(AllSalary);
+    }
+    public void EmpWithLowestSalary(){
+        String Bednyak = "";
+        double least = 10000000;
+        for (Employee emp: employees){
+            if (emp.getSalary()<least){
+                least=emp.getSalary();
+                Bednyak = emp.getFio();
+            }
+        }
+        System.out.println(Bednyak);
+    }
+    public void EmpWithLowestSalary(double Salary){
+        for (Employee emp:employees){
+            if (emp.getSalary()<Salary){
+                System.out.println(emp.getId() +" "+ emp.getSalary()+" " + emp.getFio());
+            }
+        }
+    }
+
+    public void EmpWithHighestSalary(){
+        String Rich ="";
+        double high = 0;
+        for (Employee emp: employees) {
+            if (emp.getSalary() > high) {
+                high = emp.getSalary();
+                Rich = emp.getFio();
+            }
+        }
+        System.out.println(Rich);
+    }
+    public void EmpWithHighestSalary(double Salary){
+        for (Employee emp: employees){
+            if (emp.getSalary()>=Salary){
+                System.out.println(emp.getId() +" "+ emp.getSalary()+" " + emp.getFio());
+            }
+        }
+    }
+    public void CalculateAverageSalary(){
+        double itog = 0;
+        double AllSalary = 0;
+        for (Employee emp: employees){
+            AllSalary+=emp.getSalary();
+        }
+        itog=AllSalary/employees.length;
+        System.out.println(String.format("%.2f", itog));
+
+
+
+    }
+    public void IndexingSalary(){
+        double index = 0.09;
+        for(Employee emp:employees){
+            emp.setSalary(emp.getSalary()*index+emp.getSalary());
+            System.out.println("Сотрудник " + emp.getFio() + " "+ emp.getSalary());
+        }
+
+    }
+
+
 
 
 }
@@ -94,5 +161,13 @@ public class PROJECT {
     public static void section1() {
         BookEmployees be = new BookEmployees();
         be.PrintAllEmployees();
+        be.CalculateSalary();
+        be.EmpWithLowestSalary();
+        be.EmpWithHighestSalary();
+        be.CalculateAverageSalary();
+        be.IndexingSalary();
+        be.EmpWithLowestSalary(60000);
+        be.EmpWithHighestSalary(60000);
+
     }
 }

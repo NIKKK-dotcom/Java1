@@ -197,7 +197,6 @@ public class dzshka {
         System.out.println(Arrays.toString(a));
     }
     public static void section18(){
-        int sum = 0;
         int[][] matrix = {
                 {1,2,3},
                 {4,5,6},
@@ -210,6 +209,7 @@ public class dzshka {
             System.out.println();
         }
         for (int i=0; i<matrix.length;i++){
+            int sum = 0;
             for (int j=0; j<matrix.length;j++) {
                 sum+=matrix[i][j];
             }
