@@ -54,4 +54,15 @@ public class Lesson6 {
         boolean isEqualsMatrix = Arrays.deepEquals(matrix1, matrix2);
         System.out.println("Равны ли matrix1 и matrxi2? - " + isEqualsMatrix);
     }
+    public static void DZZZZ(){
+        int[] mas = {1,2,3,4};
+        for (int number: mas){
+            System.out.print(number);
+        }
+        for (int i=0;i<mas.length;i++){
+            mas[i]=mas[i]*2;
+        }
+        System.out.println();
+        System.out.println(Arrays.toString(mas));
+    }
 }
