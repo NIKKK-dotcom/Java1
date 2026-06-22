@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class dzshka {
     public static void section1(){
         int p1 = 10;
@@ -143,7 +145,7 @@ public class dzshka {
             num++;
 
         }
-    } // ДЗЗЗЗЗЗЗЗЗЗЗЗ
+    }
     public static void section13(){
         int a = 1;
         int c = 0;
@@ -176,7 +178,83 @@ public class dzshka {
         }    while (RandomNum!=15);
         System.out.println("Кол-во сгенериных чисел до 15: " + count);
     }
+    public static void section16(){
+        int[] a = {1,2,3,4,5,6};
+        int su = 0;
+        for (int i=0;i<a.length;i++){
+            su+=a[i];
+        }
+        System.out.println(su/a.length);
+
+    }// ДЗЗЗЗЗЗЗЗЗЗЗЗ
+    public static void section17(){
+        int[] a = {1,2,3,4,5,6};
+        for (int i=0;i<a.length;i++){
+            if (a[i]<0){
+                a[i]=-a[i];
+            }
+        }
+        System.out.println(Arrays.toString(a));
     }
+    public static void section18(){
+        int sum = 0;
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9},
+        };
+        for (int i=0; i<matrix.length;i++){
+            for (int j=0; j<matrix.length;j++){
+                System.out.print(matrix[i][j]);
+            }
+            System.out.println();
+        }
+        for (int i=0; i<matrix.length;i++){
+            for (int j=0; j<matrix.length;j++) {
+                sum+=matrix[i][j];
+            }
+                System.out.println(sum);
+            }
+    }
+    public static void section19(){
+        int max = 0;
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9},
+        };
+        for (int i=0; i<matrix.length;i++){
+            for (int j=0; j<matrix.length;j++){
+                if (matrix[i][j]>max){
+                    max=matrix[i][j];
+                }
+            }
+    }
+        System.out.println(max);
+    }
+    public static void section20(){
+        int[][] matrix = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9},
+        };
+
+        boolean Dyplicate = false;
+        for (int i=0; i<matrix.length;i++){
+            for (int j=0; j<matrix.length;j++){
+                if (matrix[i]==matrix[j]){
+                    Dyplicate = true;
+                }
+            }
+        }
+        if (Dyplicate){
+            System.out.println("Есть повтор");
+        }
+        else{
+            System.out.println("Нет повтора");
+        }
+    }
+}
 
 
 

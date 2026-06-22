@@ -1,5 +1,5 @@
 public class Main {
     public static void main() {
-        dzshka.section15();
+        dzshka.section20();
     }
 }
