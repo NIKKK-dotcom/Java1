@@ -30,4 +30,22 @@ public class Lesson7 {
         message = String.format("Привет! Меня зовут %s, мне %d лет, я люблю %s", "Валера", 15, "футбол");
         System.out.println(message);
     }
+    public static void dz(){
+        String text = "Hello!";
+        char first = text.charAt(0);
+        boolean contains = text.contains("Java");
+        System.out.println("Длина строки" + text.length() + "Первый символ" + first + "Содержит Java" + contains);
+
+    }
+    public static void dz1(){
+        String text = "Прога прога Java ";
+        System.out.println(text.substring(0,3));
+        System.out.println(text.toUpperCase());
+        System.out.println(text.indexOf("Java"));
+
+    }
+    public static void dz2(String name, int quantity, double price){
+        double total = quantity*price;
+        System.out.println("Вы купили" +name +"количество: " + quantity  +  "итоговая стоимость: " + total);
+    }
 }
