@@ -38,6 +38,11 @@ class Calculator {
         return number * factorial(number - 1);
     }
 }
+class Calcul{
+    public static int multilpy(int a, int b){
+        return a*b;
+    }
+}
 
 public class Lesson8 {
     public static void sayhello(){
@@ -71,4 +76,45 @@ public class Lesson8 {
         int result_factorial = calc.factorial(4);
         System.out.println(result_factorial);
     }
+    public static void dz(){
+        System.out.println(Calcul.multilpy(5,3));
+    }
+    public static void dz2(){
+        System.out.println(sum(5));
+        System.out.println(sum(6));
+    }
+    public static int sum(int n){
+        if (n<=0){
+            return 0;
+        }
+        return n+sum(n-1);
+    }
+    public static void dz3(){
+        print("Хлеб");
+    }
+    public static void print(String name){
+        System.out.println("Продукь " + name);
+    }
+    public static void print(String name, int quantity, int price){
+        System.out.println("Продукт " + name + " Кол-во " + quantity + " Цена " + price);
+    }
+    public static int dz4(int num){
+        if (num==0){
+            return 0;
+        }
+        return (num%10) + dz4(num/10);
+    }
+    public static void dzz4(){
+        System.out.println(dz4(12));
+        System.out.println(dz4(0));
+    }
+    public static int perimeter(int i){
+        return 4*i;
+    }
+    public static void dzz5(){
+        for (int i = 1; i<=5; i++){
+            System.out.println(perimeter(i));
+        }
+    }
 }
+
