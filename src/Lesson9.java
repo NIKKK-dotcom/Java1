@@ -65,6 +65,77 @@ class Car {
     }
 }
 
+class Animal1{
+    String name;
+    String type;
+    public Animal1(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
+    public void printInfo() {
+        System.out.println("Это " + type + " по имени " + name);
+    }
+}
+class Book {
+     String title;
+     String author;
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+}
+
+class Library {
+     Book[] books;
+     int count;
+
+    public Library(int size) {
+        books = new Book[size];
+        count = 0;
+    }
+
+    public void addBook(Book book) {
+        if (count < books.length) {
+            books[count] = book;
+            count++;
+        }
+    }
+
+    public void printAllBooks() {
+        for (int i = 0; i < count; i++) {
+            System.out.println(books[i].getTitle() + " - " + books[i].getAuthor());
+        }
+    }
+
+    public String findBook(String title) {
+        for (int i = 0; i < count; i++) {
+            if (books[i].getTitle().equals(title)) {
+                return "Книга '" + title + "' найдена";
+            }
+        }
+        return "Книга '" + title + "' не найдена";
+    }
+
+    public String findAuthorByTitle(String title) {
+        for (int i = 0; i < count; i++) {
+            if (books[i].getTitle().equals(title)) {
+                return "Автор: " + books[i].getAuthor();
+            }
+        }
+        return "Книга не найдена";
+    }
+}
+
+
 public class Lesson9 {
     public static void section1() {
         Human human1 = new Human("Katya", 14);
@@ -90,6 +161,15 @@ public class Lesson9 {
 
         Car.howManyCar();
 
+    }
+    public static void dz(){
+        Animal1 an = new Animal1("Xz", "cacoy-to");
+        an.printInfo();
+        Library lib = new Library(3);
+        lib.addBook(new Book("Война и мир", "Толстой"));
+        lib.addBook(new Book("Капитанская дочка", "Пушкин"));
+        lib.printAllBooks();
+        System.out.println(lib.findBook("Война и мир"));
     }
 }
 
